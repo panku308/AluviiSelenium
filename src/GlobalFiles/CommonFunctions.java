@@ -3,6 +3,7 @@ package GlobalFiles;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class CommonFunctions {
 	public static WebDriver driver = null;
@@ -24,7 +25,19 @@ public class CommonFunctions {
 		driver.manage().window().maximize();
 		return driver;
 	}
+	public static void SelectValueFromDropdown(WebElement element, String OptName)
+	{
+		element.click();
+		Select ObjSelect = new Select(element);
+		ObjSelect.selectByValue(OptName);
+	}
 	
+	public static void SelectValueFromDropdownByVisibleText(WebElement element, String OptName)
+	{
+		element.click();
+		Select ObjSelect = new Select(element);
+		ObjSelect.selectByVisibleText(OptName);
+	}
 	public static void Login(WebDriver driver) throws InterruptedException
 	{
 		clearLoginFields();
