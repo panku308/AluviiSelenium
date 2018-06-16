@@ -3,9 +3,9 @@ package ManageMembershipsTest;
 import org.testng.annotations.Test;
 
 import GlobalFiles.CommonFunctions;
-import GlobalFiles.CreateNewAccountDialogBoxElements;
-import GlobalFiles.DashboardPageElements;
-import GlobalFiles.ManageMembershipsPageElements;
+import ObjectRepository.CreateNewAccountDialogBoxElements;
+import ObjectRepository.DashboardPageElements;
+import ObjectRepository.ManageMembershipsPageElements;
 
 import org.testng.annotations.BeforeClass;
 
@@ -40,7 +40,7 @@ public class CreateMemberTest {
 			  ManageMembershipsPageElements.GetAccountOptionDropdown(driver).click();
 			  Thread.sleep(2000); 
 			  ManageMembershipsPageElements.GetCreateNewAccountLink(driver).click();
-			  Thread.sleep(5000);
+			  Thread.sleep(10000);
 			  List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
 			  System.out.println("iframe length = " + iframeElements.size());
 			  driver.switchTo().frame(0);

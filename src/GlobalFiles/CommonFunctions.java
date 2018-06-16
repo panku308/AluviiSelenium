@@ -1,9 +1,12 @@
 package GlobalFiles;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
+import ObjectRepository.LoginPageElements;
 
 public class CommonFunctions {
 	public static WebDriver driver = null;
@@ -40,7 +43,9 @@ public class CommonFunctions {
 	}
 	public static void Login(WebDriver driver) throws InterruptedException
 	{
+	
 		clearLoginFields();
+		
 		LoginPageElements.GetUsernameField(driver).sendKeys(UserName);
 		LoginPageElements.GetPasswordField(driver).sendKeys(Password);
 		LoginPageElements.GetLoginButton(driver).click();
