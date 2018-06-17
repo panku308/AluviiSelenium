@@ -88,5 +88,6 @@ public class CreateProductTest {
 	  @AfterClass
 	  public void afterClass() {
 		  driver.quit();
+		  
 	  }
 }
