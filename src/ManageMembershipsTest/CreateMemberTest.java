@@ -31,8 +31,7 @@ public class CreateMemberTest {
 	  @Test
 	  public void CreateMemeberTest() throws Exception
 	  {
-		  try
-		  {
+		 
 			  CommonFunctions.Login(driver);
 			  Thread.sleep(5000);
 			  DashboardPageElements.GetManageMemberShipLink(driver).click();
@@ -66,12 +65,6 @@ public class CreateMemberTest {
 			  Thread.sleep(5000);
 			  actualResult = ManageMembershipsPageElements.GetAccountsTableFirstRowEmailColum(driver).getText();
 			  assertEquals(actualResult, EmailID);
-
-		  }
-		  catch(Exception e)
-		  {
-			  System.out.println(e);
-		  }
 		  		  
 		  
 	  }
