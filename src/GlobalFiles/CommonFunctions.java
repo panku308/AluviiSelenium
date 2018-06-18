@@ -14,7 +14,7 @@ public class CommonFunctions {
 	public static String url=domainName+".aluvii.com/employee/";
 	public static String UserName="ceo@aluvii.com";
 	public static String Password="Admin@123";
-	public static String chromeDriverPath="C:\\Users\\DELL\\Downloads\\Softwares\\chromedriver_win32\\chromedriver.exe";
+	public static String chromeDriverPath="C:\\chromedriver_win32\\chromedriver.exe";
 	
 	
 	public static int CreateProduct_unitPrice=5;
