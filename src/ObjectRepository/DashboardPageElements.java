@@ -19,5 +19,10 @@ private static WebElement element = null;
 		element =driver.findElement(By.linkText("Register Management"));
 		return element;
 	}
+	public static WebElement GetWaiverManagementLink(WebDriver driver)
+	{
+		element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/ul/li[30]/a/span"));		
+		return element;
+	}
 
 }
