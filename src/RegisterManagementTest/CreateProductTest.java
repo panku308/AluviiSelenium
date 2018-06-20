@@ -58,16 +58,13 @@ public class CreateProductTest {
 		  AddProductDialogBoxElements.GetPricingTab(driver).click();
 		  Thread.sleep(3000);
 		  
-		  for (int i=0;i<CommonFunctions.CreateProduct_unitPrice;i++)
-		  {
-			  AddProductDialogBoxElements.GetUnitPriceIncreaseArrow(driver).click();
-		  }
+		  AddProductDialogBoxElements.SetUnitPrice(driver, CommonFunctions.CreateProduct_unitPrice);
 		  AddProductDialogBoxElements.GetSalesTaxTab(driver).click();
 		  Thread.sleep(3000);
 		  AddProductDialogBoxElements.GetSalesTax_FirstRowOfTaxOptionNameColumn(driver).click();
 		  AddProductDialogBoxElements.GetSalesTax_FirstRowOfTaxOptionNameColumn(driver).click();
 		  Thread.sleep(2000);
-		  SelectfirstOptionFromOptionDropdown(driver);
+		  AddProductDialogBoxElements.SelectfirstOptionFromTaxOptionDropdown(driver);
 		  Thread.sleep(2000);
 		  AddProductDialogBoxElements.GetAddButton(driver).click();
 		  Thread.sleep(10000);
@@ -81,10 +78,7 @@ public class CreateProductTest {
 		  
 		  
 	  }
-	  public void SelectfirstOptionFromOptionDropdown(WebDriver driver)
-	  {
-		  driver.findElement(By.xpath("//*[@id='TaxOptionName_listbox']//li[1]")).click();
-	  }
+	  
 	  @AfterClass
 	  public void afterClass() {
 		  driver.quit();

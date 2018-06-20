@@ -15,7 +15,7 @@ private static WebElement element = null;
 	}
 	public static WebElement GetRegisterManagementLink(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/ul/li[14]/a/span"));
+		
 		element =driver.findElement(By.linkText("Register Management"));
 		return element;
 	}
@@ -24,5 +24,10 @@ private static WebElement element = null;
 		element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/ul/li[30]/a/span"));		
 		return element;
 	}
+	public static void clickOnManagementlink(WebDriver driver)
+	{
+		DashboardPageElements.GetWaiverManagementLink(driver).click();	
+	}
+	
 
 }

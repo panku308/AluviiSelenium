@@ -1,6 +1,7 @@
 package ObjectRepository;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -37,6 +38,14 @@ private static WebElement element = null;
 	{
 		element =driver.findElement(By.xpath("//li[text() = '"+OptName+"']"));
 		return element;
+	}
+	public static void OpenWaiverManagementPage(WebDriver driver) throws InterruptedException
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].scrollIntoView();",DashboardPageElements.GetWaiverManagementLink(driver));
+		  DashboardPageElements.clickOnManagementlink(driver);
+		  DashboardPageElements.GetWaiverManagementLink(driver).click();
+		  Thread.sleep(5000);
 	}
 
 }

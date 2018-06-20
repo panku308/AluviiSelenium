@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import GlobalFiles.CommonFunctions;
+
 public class AddProductDialogBoxElements {
 
 
@@ -12,37 +14,37 @@ private static WebElement element = null;
 	
 	public static WebElement GetProductsTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/ul/li[1]/a"));
+		
 		element =driver.findElement(By.linkText("General Info"));
 		return element;
 	}
 	public static WebElement GetPricingTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath(""));
+		
 		element =driver.findElement(By.linkText("Pricing"));
 		return element;
 	}
 	public static WebElement GetTicketTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath(""));
+		
 		element =driver.findElement(By.linkText("Ticket"));
 		return element;
 	}
 	public static WebElement GetInventoryTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath(""));
+		
 		element =driver.findElement(By.linkText("Inventory"));
 		return element;
 	}
 	public static WebElement GetSalesTaxTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath(""));
+		
 		element =driver.findElement(By.linkText("Sales Tax"));
 		return element;
 	}
 	public static WebElement GetOtherTab(WebDriver driver)
 	{
-		//element =driver.findElement(By.xpath(""));
+		
 		element =driver.findElement(By.linkText("Other"));
 		return element;
 	}
@@ -132,4 +134,19 @@ private static WebElement element = null;
 	
 	
 //===================================Other Info Tab Elements============================================
+	
+	//========================================================================
+	
+	
+	 public static void SelectfirstOptionFromTaxOptionDropdown(WebDriver driver)
+	  {
+		  driver.findElement(By.xpath("//*[@id='TaxOptionName_listbox']//li[1]")).click();
+	  }
+	 public static void SetUnitPrice(WebDriver driver, int UnitPrice)
+	 {
+		 for (int i=0;i<CommonFunctions.CreateProduct_unitPrice;i++)
+		  {
+			  AddProductDialogBoxElements.GetUnitPriceIncreaseArrow(driver).click();
+		  }
+	 }
 }

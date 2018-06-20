@@ -10,7 +10,7 @@ import ObjectRepository.LoginPageElements;
 
 public class CommonFunctions {
 	//--------------------------------------------Global Variables------------------------------------------------------
-	public static String domainName="https://devstaging";
+	public static String domainName="https://sessionqa";
 	public static String url=domainName+".aluvii.com/employee/";
 	public static String UserName="ceo@aluvii.com";
 	public static String Password="Admin@123";
@@ -18,9 +18,10 @@ public class CommonFunctions {
 	
 	
 	public static int CreateProduct_unitPrice=5;
+	public static int AddWaiver_MinAge=18;
 	//-------------------------------------------------------------------------------------------------------------------
 	public static WebDriver driver = null;
-	private static WebElement element=null;
+	
 	
 	public static WebDriver SetupEnvironment(String url, String Browser)
 	{
@@ -69,6 +70,10 @@ public class CommonFunctions {
 	{
 		LoginPageElements.GetUsernameField(driver).clear();
 		LoginPageElements.GetPasswordField(driver).clear();
+	}
+	public static void printString(String str)
+	{
+		System.out.println(str);
 	}
 	
 }
