@@ -75,5 +75,23 @@ public class CommonFunctions {
 	{
 		System.out.println(str);
 	}
-	
+	public static boolean CompareSingleDimensionStringArray(String act[], String exp[])
+	{
+		boolean compareResult=false;
+		
+		for(int i=0; i < act.length;i++)
+		{
+			System.out.println("Actual string["+i+"] = " +act[i]+ " , Expected String["+i+"] = " +exp[i] );
+			if(act[i].toLowerCase().trim().equals(exp[i].toLowerCase().trim()))
+			{
+				compareResult=true;
+			}
+			else
+			{
+				compareResult=false;
+				break;
+			}
+		}
+		return compareResult;
+	}
 }

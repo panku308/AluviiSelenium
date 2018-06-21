@@ -14,8 +14,8 @@ private static WebElement element = null;
 	
 	public static WebElement GetProductsTab(WebDriver driver)
 	{
-		
 		element =driver.findElement(By.linkText("General Info"));
+		
 		return element;
 	}
 	public static WebElement GetPricingTab(WebDriver driver)

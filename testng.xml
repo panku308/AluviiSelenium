@@ -11,6 +11,13 @@
 		<class name="RegisterManagementTest.CreateProductTest">  </class>		
 	</classes>
 </test>
+<test name="AdddWaiver-SignWaiver-VerifyWaiver-Test">
+	<classes>
+		<class name="WaiverTest.AddWaiver_ReqAllGuestToSign">  </class>
+		<class name="WaiverTest.AddWaiver_ReqAllGuestOverMinAgeTest">  </class>
+		<class name="WaiverTest.AddWaiver_OnlyOneGuestTest">  </class>		
+	</classes>
+</test>
    
  
   
