@@ -85,38 +85,44 @@ private static WebElement element = null;
 	public static WebElement GetUnitCostField(WebDriver driver)
 	{
 		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/input[1]"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/input[1]"));
+		element =driver.findElement(By.xpath("//form[@id='frmProductDetail']//div[1]/span/span/input[1]"));
 		return element;
 	}
 	public static WebElement GetUnitCostIncreaseArrow(WebDriver driver)
 	{
 		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/span/span[1]/span"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/span/span[1]/span"));
+		element =driver.findElement(By.xpath("//form[@id='frmProductDetail']//div[1]/span/span[1]/span"));
 		return element;
 	}
 	public static WebElement GetUnitCostDecreaseArrow(WebDriver driver)
 	{
 		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/span/span[2]/span"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[1]/div/div[1]/span/span/span/span[2]/span"));
+		element =driver.findElement(By.xpath("//form[@id='frmProductDetail']//div[1]/span/span[2]/span"));
 		return element;
 	}
 	public static WebElement GetUnitPriceField(WebDriver driver)
 	{
 											  
 
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/input[1]"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[-2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/input[1]"));
+		element =driver.findElement(By.xpath("//div[@id='divUnitPrice']//span/input[1]"));
 		return element;
 	}
 	public static WebElement GetUnitPriceIncreaseArrow(WebDriver driver)
 	{
 		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/span/span[1]/span"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/span/span[1]/span"));
+		element =driver.findElement(By.xpath("//div[@id='divUnitPrice']//span/span[1]/span"));
 		return element;
 	}
 	public static WebElement GetUnitPriceDecreaseArrow(WebDriver driver)
 	{
 		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/span/span[2]/span"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[2]/fieldset/div/div[2]/div[2]/div/div/div/span/span/span/span[2]/span"));
+		element =driver.findElement(By.xpath("//div[@id='divUnitPrice']//span/span[2]/span"));
 		return element;
 	}
 
@@ -127,7 +133,8 @@ private static WebElement element = null;
 	
 	public static WebElement GetSalesTax_FirstRowOfTaxOptionNameColumn(WebDriver driver)
 	{		
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[5]/div/div/div[3]/table/tbody/tr[1]/td[2]"));
+//		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div/div/div[5]/div/div/div[3]/table/tbody/tr[1]/td[2]"));
+		element =driver.findElement(By.xpath("//div[@id='TaxOptionGrid']//div[@class ='k-grid-content']/table/tbody/tr[1]/td[2]"));
 		return element;
 	}
 	

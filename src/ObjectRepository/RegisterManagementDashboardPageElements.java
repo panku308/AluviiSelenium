@@ -13,9 +13,9 @@ private static WebElement element = null;
 		element =driver.findElement(By.linkText("Products"));
 		return element;
 	}
-	public static WebElement GetSelectOptionDropdown(WebDriver driver)
+	public static WebElement GetProductsTab_SubProductsTab_SelectOptionDropdown(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/diwidget/div/div/div/div[2]/div/div/div[1]/div[1]/div/div[1]/span/span/span[1]"));
+		element =driver.findElement(By.xpath("//div[@id='tabstrip_product-1']//span[.='Select Option']"));
 		return element;
 	}
 	public static WebElement SelectOptionFromSelectOptionDD(WebDriver driver, String OptName)
@@ -26,12 +26,14 @@ private static WebElement element = null;
 	//
 	public static WebElement Get_ProductTable_IDColumn(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/diwidget/div/div/div/div[2]/div/div/div[1]/div[1]/div/div[3]/div[1]/div/table/thead/tr/th[1]/a[2]"));
+		///element =driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/diwidget/div/div/div/div[2]/div/div/div[1]/div[1]/div/div[3]/div[1]/div/table/thead/tr/th[1]/a[2]"));
+		element =driver.findElement(By.xpath("//div[@id='productsgrid']//a[ .= 'ID']"));
 		return element;
 	}
 	public static WebElement Get_ProductTable_FirstRowProductNameCloumn(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/diwidget/div/div/div/div[2]/div/div/div[1]/div[1]/div/div[3]/div[2]/table/tbody/tr[1]/td[2]"));
+		//element =driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/diwidget/div/div/div/div[2]/div/div/div[1]/div[1]/div/div[3]/div[2]/table/tbody/tr[1]/td[2]"));
+		element =driver.findElement(By.xpath("//div[@id='productsgrid']//div[@class='k-grid-content']/table/tbody/tr[1]/td[2]"));
 		return element;
 	}
 

@@ -45,7 +45,7 @@ private static WebElement element = null;
 	}
 	public static WebElement Get_Add_CountryField(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/form/div[2]/div[1]/div/div[7]/div[1]/div[2]/span/span/span[2]"));
+		element =driver.findElement(By.xpath("//span[.='United States']"));
 		return element;
 	}
 	public static WebElement Get_Add_NextButton(WebDriver driver)

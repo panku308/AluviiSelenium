@@ -21,7 +21,8 @@ private static WebElement element = null;
 	}
 	public static WebElement GetMemberShipDropDown(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/div[1]/div[5]/div[1]/div[2]/div[2]/span/span/span[1]"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/div[1]/div[5]/div[1]/div[2]/div[2]/span/span/span[1]"));
+		element =driver.findElement(By.xpath("//div[@id='divWaiver']//span[.= 'Select Package']"));
 		return element;
 	}
 	public static WebElement GetWaiverLanguageTextArea(WebDriver driver)
@@ -46,7 +47,13 @@ private static WebElement element = null;
 	}
 	public static WebElement GetMinAgeDropdownUpArrow(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/div[1]/div[13]/div[1]/div/div[2]/span/span/span/span[1]/span"));
+		//element =driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/div[1]/div[13]/div[1]/div/div[2]/span/span/span/span[1]/span"));
+		element =driver.findElement(By.xpath("//span[@class='k-widget k-numerictextbox']//span[@class='k-icon k-i-arrow-60-up']"));
+		return element;
+	}
+	public static WebElement GetMinAgeField(WebDriver driver)
+	{
+		element =driver.findElement(By.xpath("//div[@id = 'divWaiver']//input[@class='k-formatted-value k-input']"));
 		return element;
 	}
 	public static WebElement GetSubmitWaiverButton(WebDriver driver)
@@ -120,8 +127,9 @@ private static WebElement element = null;
 			  AddWaiverDialogBoxElements.GetReqOneGuestRadioButton(driver).click();
 		  }
 		  
-		  
+		  Thread.sleep(2000);
 		  AddWaiverDialogBoxElements.SetMinAge(driver);
+		 
 		  
 		  AddWaiverDialogBoxElements.GetSubmitWaiverButton(driver).click();
 		  Thread.sleep(10000);

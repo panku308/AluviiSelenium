@@ -8,8 +8,7 @@ public class CategoryDialogBoxElements {
 	private static WebElement element = null;
 	public static WebElement GetCategoryName(WebDriver driver)
 	{		
-		//element =driver.findElement(By.xpath("/html/body/div[19]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/a"));
-		
+				
 		element =driver.findElement(By.xpath("//div[@id='windowInnerPopup']//table/tbody/tr[1]/td[2]/a"));
 		return element;
 	}

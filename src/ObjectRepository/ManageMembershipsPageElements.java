@@ -33,28 +33,33 @@ private static WebElement element = null;
 	
 	public static WebElement GetAccountsTableFirstRowEmailColum(WebDriver driver)
 	{
-		element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr/td[8]"));
+		//element =driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr/td[8]"));
+		element =driver.findElement(By.xpath("//div[@class='k-grid-content']//table[@class='gridrow k-selectable']/tbody/tr/td[8]"));
 		return element;
 	}
 	public static WebElement GetExpandArrowElement(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/a"));
+		//element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/a"));
+		element =driver.findElement(By.xpath("//div[@class='k-grid-content']//table[@class='gridrow k-selectable']/tbody/tr[1]/td[1]/a"));		
 		return element;
 	}
 	public static WebElement GetAccountTableElement(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody"));
+		//element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody"));
+		element =driver.findElement(By.xpath("//div[@class='k-grid-content']//table[@class='gridrow k-selectable']/tbody"));
 		return element;
 	}
 	public static WebElement GetAccountGuestTable(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td/div/div/div[1]/div[2]/table/tbody"));
+		//element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td/div/div/div[1]/div[2]/table/tbody"));
+		element = driver.findElement(By.xpath("//div[contains(@id, 'accountgrid_')]//table/tbody"));
 		return element;
 	}
 	public static WebElement GetAccountGuestFnameLname(WebDriver driver, int row)
 	{
 		
-		element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td/div/div/div[1]/div[2]/table/tbody/tr["+(row)+"]/td[3]/div/ul/li[1]/h3"));
+		//element = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td/div/div/div[1]/div[2]/table/tbody/tr["+(row)+"]/td[3]/div/ul/li[1]/h3"));
+		element = driver.findElement(By.xpath("//div[contains(@id, 'accountgrid_')]//table/tbody/tr["+(row)+"]/td[3]/div/ul/li[1]/h3"));
 		return element;
 	}
 	
@@ -106,8 +111,6 @@ private static WebElement element = null;
 		 ManageMembershipsPageElements.GetSearchTextField(driver).sendKeys(EmailID);
 		 ManageMembershipsPageElements.GetSearchButtonField(driver).click();	
 		 Thread.sleep(5000); 
-		 //WebElement AccountRecordRow = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/table/tbody"));
-		                                                   
 		 WebElement AccountRecordRow = ManageMembershipsPageElements.GetAccountTableElement(driver);
 		 List<WebElement> TableRows = AccountRecordRow.findElements(By.tagName("tr"));
 		 System.out.println("GetSearchRecordRowCountOfAccountTable" +TableRows.size());
