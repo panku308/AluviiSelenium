@@ -75,7 +75,7 @@ public class CreateRegisterTest {
 		  
 		  AddCategoryDialogboxInsideAddRegisterPageElements.GetCategoryDD(driver).click();
 		  Thread.sleep(2000);
-		  AddCategoryDialogboxInsideAddRegisterPageElements.SelectValueFromCategoryDD(driver, "2.1rc1RegCat");
+		  AddCategoryDialogboxInsideAddRegisterPageElements.SelectValueFromCategoryDD(driver, "Walkme123");
 		  Thread.sleep(2000);
 		  AddCategoryDialogboxInsideAddRegisterPageElements.GetAddCategoryButton(driver).click();
 		  Thread.sleep(2000);

@@ -21,7 +21,7 @@ public class CommonFunctions {
 	
 	
 	public static int CreateProduct_unitPrice=5;
-	public static int AddWaiver_MinAge=18;
+	public static int AddWaiver_MinAge=15;
 	//-------------------------------------------------------------------------------------------------------------------
 	public static WebDriver driver = null;
 	

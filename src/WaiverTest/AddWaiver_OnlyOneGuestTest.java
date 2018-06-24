@@ -37,7 +37,7 @@ public class AddWaiver_OnlyOneGuestTest {
 	 @Test(priority=8)
 	 public void SignWaiverTest() throws InterruptedException
 	 {
-		 SignWaiverPageElements.AddWaiverSign(driver, NumberOfWaiver); 
+		 SignWaiverPageElements.AddWaiverSign(driver, NumberOfWaiver,1,0); 
 	 }
 	 @Test (priority=9)
 	 public void VerifySignedWaiverOnManageMemebershipTest() throws InterruptedException
