@@ -1,6 +1,8 @@
 package GlobalFiles;
 
 
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,14 +20,14 @@ public class CommonFunctions {
 	public static String UserName="ceo@aluvii.com";
 	public static String Password="Admin@123";
 	public static String chromeDriverPath="C:\\chromedriver_win32\\chromedriver.exe";
-	
-	
+
+
 	public static int CreateProduct_unitPrice=5;
 	public static int AddWaiver_MinAge=15;
 	//-------------------------------------------------------------------------------------------------------------------
 	public static WebDriver driver = null;
-	
-	
+
+
 	public static WebDriver SetupEnvironment(String url, String Browser)
 	{
 		if (Browser.toLowerCase().equals("chrome"))			
@@ -49,26 +51,26 @@ public class CommonFunctions {
 		Select ObjSelect = new Select(element);
 		ObjSelect.selectByIndex(indexID);
 	}
-	
+
 	public static void SelectOptionFromDropdownByVisibleText(WebElement element, String OptName)
 	{
 		element.click();
 		Select ObjSelect = new Select(element);
 		ObjSelect.selectByVisibleText(OptName);
 	}
-	
+
 	public static void Login(WebDriver driver) throws InterruptedException
 	{
-	
+
 		clearLoginFields();
-		
+
 		LoginPageElements.GetUsernameField(driver).sendKeys(UserName);
 		LoginPageElements.GetPasswordField(driver).sendKeys(Password);
 		LoginPageElements.GetLoginButton(driver).click();
 		Thread.sleep(5000);
-		
+
 	}
-	
+
 	public static void clearLoginFields()
 	{
 		LoginPageElements.GetUsernameField(driver).clear();
@@ -81,7 +83,7 @@ public class CommonFunctions {
 	public static boolean CompareSingleDimensionStringArray(String act[], String exp[])
 	{
 		boolean compareResult=false;
-		
+
 		for(int i=0; i < act.length;i++)
 		{
 			System.out.println("Actual string["+i+"] = " +act[i]+ " , Expected String["+i+"] = " +exp[i] );
@@ -101,5 +103,14 @@ public class CommonFunctions {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, WaitingTimeInSeconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public static String generateRandomIndex() {
+
+		int minimum = 0;
+		int maximum = 99999;
+
+		return String.valueOf(ThreadLocalRandom.current().nextInt(minimum,maximum));
+
 	}
 }
