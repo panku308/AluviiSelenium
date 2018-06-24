@@ -1,10 +1,13 @@
 package GlobalFiles;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ObjectRepository.LoginPageElements;
 
@@ -93,5 +96,10 @@ public class CommonFunctions {
 			}
 		}
 		return compareResult;
+	}
+	public static void WaitForElementToVisible(WebDriver driver, WebElement element, int WaitingTimeInSeconds)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, WaitingTimeInSeconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 }

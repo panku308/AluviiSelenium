@@ -40,7 +40,7 @@ public class CreateProductTest {
 		  Thread.sleep(5000);
 		  RegisterManagementDashboardPageElements.GetProductsTab(driver).click();
 		  Thread.sleep(5000);
-		  RegisterManagementDashboardPageElements.GetProductsTab_SubProductsTab_SelectOptionDropdown(driver).click();
+		  RegisterManagementDashboardPageElements.GetProductsTab_SubTab_Products_SelectOptionDropdown(driver).click();
 		  Thread.sleep(3000);
 		  RegisterManagementDashboardPageElements.SelectOptionFromSelectOptionDD(driver, "Add Product").click();
 		  Thread.sleep(3000);
@@ -81,7 +81,7 @@ public class CreateProductTest {
 	  
 	  @AfterClass
 	  public void afterClass() {
-		  driver.quit();
+		//  driver.quit();
 		  
 	  }
 }

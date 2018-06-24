@@ -55,7 +55,8 @@ public class CreateMemberTest {
 			  CreateNewAccountDialogBoxElements.GetFirstnameField(driver).sendKeys("fname"+System.currentTimeMillis());
 			  CreateNewAccountDialogBoxElements.GetLastname(driver).sendKeys("lname"+System.currentTimeMillis());
 			  CreateNewAccountDialogBoxElements.GetSubmitButton(driver).click();
-			  Thread.sleep(20000);
+			  
+			  Thread.sleep(60000);
 			  CreateNewAccountDialogBoxElements.GetClosetButton(driver).click();
 			  Thread.sleep(10000);
 			  driver.switchTo().defaultContent();
@@ -71,7 +72,7 @@ public class CreateMemberTest {
 	  
 	  @AfterClass
 	  public void afterClass() {
-		  driver.quit();
+		//  driver.quit();
 	  }
   
   
