@@ -1,5 +1,6 @@
 package GlobalFiles;
 
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -15,6 +16,9 @@ public class Debug {
 	public static WebDriver driver=null;
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		
+		Date d = new Date();
+		System.out.println("CY= " + d.getYear()+ "CD=" + d.getDate() + " CM = " + d.getMonth());
 		
 		driver = CommonFunctions.SetupEnvironment(CommonFunctions.url, "chrome");
 		Thread.sleep(5000);

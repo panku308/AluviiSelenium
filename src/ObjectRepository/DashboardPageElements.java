@@ -29,6 +29,11 @@ private static WebElement element = null;
 	{
 		DashboardPageElements.GetWaiverManagementLink(driver).click();	
 	}
+	public static WebElement GetEmployeeRegistersLink(WebDriver driver)
+	{
+		element =driver.findElement(By.linkText("Employee Registers"));		
+		return element;
+	}
 	
 
 }
